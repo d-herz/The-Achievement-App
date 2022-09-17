@@ -1,4 +1,4 @@
-<h1 align="center"> The Game Tracker App </h1>
+<h1 align="center"> The AchievementApp </h1>
 <h3 align="center"> Powered by Steam </h3>
 <!--- <h3 align="center"> <a href="https://game-tracker-100devs.herokuapp.com/"> Check it out! </a></h3> --->
 
