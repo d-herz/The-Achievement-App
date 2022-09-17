@@ -30,7 +30,7 @@ This collaborative full-stack project was created for gamers, by gamers. The App
 </p>
 
 
-![](https://github.com/d-herz/todo-mvc-auth-local/blob/main/game-tracker.gif)
+<!--- ![](https://github.com/d-herz/todo-mvc-auth-local/blob/main/game-tracker.gif) --->
 
 
 
