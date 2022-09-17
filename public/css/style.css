@@ -27,8 +27,9 @@ body {
 }
 
 h1 {
-    user-select: none;
     font-weight: 300;
+    letter-spacing: .5rem;
+    user-select: none;
     padding: 1rem;
 }
 h2 {
@@ -38,11 +39,19 @@ h2 {
     padding: 1rem;
 }
 
+.logo1{
+    color: black;
+}
+
+.logo2{
+    color: red;
+}
+
 
 /* HEADER */
 header{
     /* border: 2px solid black; */
-    background: linear-gradient(to bottom, #222222, rgba(0,0,0,0));
+    background: linear-gradient(to bottom, #222222, rgba(255, 255, 255, 0));
     padding: 3rem;
     color: #cccccc;
     font-size: 20px;
@@ -51,10 +60,11 @@ header{
 
 header h1{
     color: white;
-    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5rem;
     letter-spacing: .3rem;
     margin-top: .25rem;
-    text-shadow: 2px 2px 5px #000000;
+    text-shadow: 1px 1px 2px #ffffff;
 }
 
 header h2{
