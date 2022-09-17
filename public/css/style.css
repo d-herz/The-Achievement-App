@@ -21,7 +21,7 @@ body {
     line-height: 1.15;
     background-color: #33333345;
     font-family: 'Open Sans', sans-serif;
-    color: #cccccc;
+    color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -51,7 +51,7 @@ h2 {
 /* HEADER */
 header{
     /* border: 2px solid black; */
-    background: linear-gradient(to bottom, #222222, rgba(255, 255, 255, 0));
+    /* background: linear-gradient(to bottom, #222222, rgba(255, 255, 255, 0)); */
     padding: 3rem;
     color: #cccccc;
     font-size: 20px;
@@ -388,6 +388,7 @@ nav {
     text-shadow: 0 0 3rem #ffe4bb;
 }
 .hours-played {
+    color: white;
     font-size: 1.75rem;
     padding: 0.5rem 0;
 }
