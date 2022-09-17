@@ -1,0 +1,14 @@
+<header>
+    <% if (user) { %>
+        <a href=<%=`/steam/${user.steamID}` %>><h1>Game Tracker App</h1></a>
+    <% } else { %>
+        <h1>Game Tracker App</h1>
+    <% } %>
+
+    <h2>Powered by Steam<sup>&reg;</sup></h2>
+    <nav class="dashboard-nav">
+        <% if (user) { %>
+            <a href="/logout" class="btn logout">Logout</a>
+        <% } %>
+    </nav>
+</header>

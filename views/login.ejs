@@ -1,0 +1,20 @@
+<main>
+    <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger">* <%= el.msg %></div>
+        <% }) %>
+    <% } %>
+    <% if (locals.messages.info) { %>
+        <% messages.info.forEach( el => { %>
+            <div class="alert alert-danger">* <%= el.msg %></div>
+        <% }) %>
+    <% } %>
+    <form action="/login" method="POST" class="form login">
+        <input type="email" name="email" placeholder="Email" class="input email" autocomplete="username">
+        <input type="password" name="password" placeholder="Password" class="input password" autocomplete="current-password">
+        <input type="submit" class="btn submit" value="Log In">
+        <span class="auth-nav">
+            Don't have an account? <a href="/signup" class="link signup">Sign Up</a>
+        </span>
+    </form>
+</main>

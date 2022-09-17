@@ -1,0 +1,516 @@
+/* Box model Hack */
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+/* HTML */
+html {
+    font-size: 62.5%;
+}
+
+
+/* BODY */
+body {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+    height: 100vh;
+    line-height: 1.15;
+    background-color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    color: #cccccc;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    user-select: none;
+    font-weight: 300;
+    padding: 1rem;
+}
+h2 {
+    user-select: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+
+/* HEADER */
+header{
+    /* border: 2px solid black; */
+    background: linear-gradient(to bottom, #222222, rgba(0,0,0,0));
+    padding: 3rem;
+    color: #cccccc;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+header h1{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    margin-top: .25rem;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+header h2{
+    color: white;
+    /* font-style: italic; */
+    letter-spacing: .5rem;
+    margin-top: .25rem;
+    text-shadow: 2px 2px 5px #010000;
+}
+
+header sup{
+    font-size: 1rem;
+
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-menu,
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: #2e2e2e;
+    border: 0.2rem solid #323232;
+    border-radius: 1rem;
+    width: min(100%, 20rem);
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.auth-menu:hover {
+    background: #323232;
+    border: 0.2rem solid #333333;
+    padding: 1rem 0.5rem;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #222222;
+    border: 0.2rem solid #323232;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #2a2a2a;
+    color: #cccccc;
+    font-size: 1.75rem;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1rem;
+    margin: 2.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn.logout:hover {
+    background-color: #cb5870;
+    border: 0.2rem solid #cb5870;;
+    color: #222222;
+}
+
+.btn:hover {
+    background-color: goldenrod;
+    border: 0.2rem solid goldenrod;
+    color: #222222;
+}
+.btn.signup:hover {
+    background-color: #20c9a4;
+    border: 0.2rem solid #20c9a4;
+    color: #222222;
+}
+
+.form {
+    width: min(100%, 25rem);
+}
+.form:hover {
+    background: #323232;
+    border: 0.2rem solid #333333;
+}
+
+.input {
+    background: #1c1c1c;
+    border: 0.2rem solid #323232;
+    border-radius: 1rem;
+    color: #cccccc;
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding: 1rem;
+    margin: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.input:hover {
+    background: #141414;
+    border: 0.2rem solid #333333;
+}
+.input:focus {
+    outline: goldenrod;
+    border: 0.2rem solid goldenrod;
+    background: #181818;
+}
+.input::placeholder {
+    color: #3f3f3f;
+    font-style: italic;
+}
+.form.signup .input:focus {
+    outline: #20c9a4;
+    border: 0.2rem solid #20c9a4;
+}
+.form.signup .btn:hover {
+    background-color: #20c9a4;
+    border: 0.2rem solid #20c9a4;
+    color: #222222;
+}
+.auth-nav {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-decoration: none;
+    color: #cccccc;
+    transition: all 0.2s ease-in-out;
+    padding: 1rem;
+}
+.link {
+    text-decoration-style: dotted;
+    color: goldenrod;
+    padding: 1rem 0;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.5rem;
+}
+.link.signup {
+    color: #20c9a4;
+}
+.link:hover {
+    color: #cb5870;
+    transform: translateY(0.1rem);
+}
+
+
+/* FOOTER */
+footer {
+    /* border: 2px solid black; */
+    margin: 5% 5% 0% 5%;
+    padding: 5%;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer h4{
+    color: white;
+    font-size: 1.75rem;
+    font-style: italic;
+    letter-spacing: .75rem;
+    margin-top: .25rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px #010000;
+}
+
+.signUpMain{
+    margin: 3%;
+}
+
+.signUpDiv{
+    margin: 0 25% 0 25%;
+}
+
+
+/* ADDITIONAL STYLES FOR DASHBOARD(TODOS) PAGE */
+/* we can add these styles to the game page where we edit todos! */
+
+.dashboardMain{
+
+    margin: 1rem 2rem;
+
+}
+
+.dashboardDiv1{
+    margin-bottom: 3rem;
+}
+
+
+.dashboardDiv1 h1{
+    color: white;
+    font-size: 3rem;
+    font-style: italic;
+    margin: .25rem 1rem 2rem 1rem;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+.dashboardDiv1 h2{
+    color: white;
+    font-size: 1.6rem;
+    /* font-style: italic; */
+    letter-spacing: .5rem;
+    margin: 1rem 1rem 2rem 1rem;
+    text-shadow: 2px 2px 5px #010000;
+}
+
+.dashboardDiv1 li{
+    color: white;
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+
+.dashboardDiv1 .del{
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.dashboardDiv1 .del:hover{
+    background-color: rgb(127, 159, 245);
+    cursor: pointer;
+}
+
+.dashboardDiv2{
+    margin: 0 25%;
+}
+
+.dashboard-headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Displays a grid of steam games */
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* A square card showing information about a steam game */
+.games-list li{
+    user-select: none;
+    background-color:#202020;
+    border: 0.4rem solid #323232;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #2a2a2a;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 400px);
+    height: min(100%, 400px);
+    transition: all 0.2s ease-in-out;
+}
+.games-list li:hover {
+    border: 0.4rem solid goldenrod;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.game-page-link {
+    text-decoration-style: dotted;
+    color: goldenrod;
+    padding: 1rem 0;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.5rem;
+}
+.game-page-link:hover {
+    color: #20c9a4;
+    background: #141414;
+    transform: translateY(-0.1rem);
+}
+.steam-page-link-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+.steam-page-link {
+    font-size: 1.5rem;
+    color: goldenrod;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.steam-page-link:hover {
+    color: #cb5870;
+    transform: translateY(-0.1rem);
+    background: #141414;
+}
+.steam-logo {
+    width: 2rem;
+    height: 2rem;
+}
+.game-count {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: goldenrod;
+    text-shadow: 0 0 2rem #e3cd84;
+    transition: all 0.2s ease-in-out;
+}
+.game-count:hover {
+    color: #ffc424;
+    text-shadow: 0 0 3rem #ffe4bb;
+}
+.hours-played {
+    font-size: 1.75rem;
+    padding: 0.5rem 0;
+}
+/* Align icon to top right of parent element*/
+.game-icon {
+    align-self: center;
+    padding: 0.5rem 0;
+}
+
+.error-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s ease-in-out;
+}
+.error {
+    background-color:#c91a38;
+    color: #cccccc;
+    width: 100%;
+    padding: 2rem 0;
+    transition: all 0.7s ease-in-out;
+}
+.error > * {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.error a {
+    color: #20c9a4;
+    text-decoration-style: dotted;
+    transition: all 0.2s ease-in-out;
+    padding: 0 0.3rem;
+    border-radius: 0.2rem;
+}
+.error a:hover {
+    color: #ffffff;
+    transform: translateY(0.2rem);
+}
+.error-section.hidden,
+.error-section.hidden .error {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
+
+/* ACHIEVEMENT STYLES */
+
+.todos-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todos-list > li{
+    display: flex;
+    gap: 3rem;
+    /* justify-content: space-evenly; */
+    user-select: none;
+    background-color:#202020;
+    border: 0.4rem solid #323232;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #2a2a2a;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    width: min(100%, 400px);
+    /* height: min(100%, 400px); */
+    transition: all 0.2s ease-in-out;
+}
+.todos-list > li:hover {
+    border: 0.4rem solid goldenrod;
+}
+
+.achievement-icon {
+    height: 100px;
+}
+
+.achievement-info {
+    flex-grow: 2;
+}
+
+.achievement-name {
+    font-weight: 700;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width:480px) {
+
+    .signUpDiv{
+        margin: 0 5% 0 5%;
+    }
+
+    .loginButton{
+        margin: 4% 0 4% 0;
+    }
+    .signUpButton{
+        margin: 4% 0 0 0;
+    }
+
+}
+
+
+
+
+/* OG STYLES */
+/* h1{
+    color: red;
+}
+*/
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+#contact-info li {
+    background: none;
+    border: .4px solid rgb(79, 79, 79);
+    box-shadow: none;
+    width: max-content;
+}
+
+#contact-info li a {
+    color: goldenrod;
+    padding: 2rem;
+}

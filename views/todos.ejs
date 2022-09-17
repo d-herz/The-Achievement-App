@@ -1,0 +1,61 @@
+<main class="dashboardMain">
+    <div class="dashboardDiv1">
+        <h1>
+            <a href="https://store.steampowered.com/app/<%= appID %>" target="_blank">
+                <%= gameName %>
+            </a>
+        </h1>
+        <img src="<%= gameInfo.data.header_image %>">
+
+        <h2>Achievements: 
+            <%= (userAchievements) ? userAchievements.length : 0 %> /
+            <%= (totalAchievements) ? totalAchievements.length : 0 %>
+        </h2>
+    </div>
+        <div class="dashboardDiv1">
+            <h3>Todos</h3>
+            <ul class="todos-list">
+                <% todos.forEach( el => { %>
+                    <li class='todoItem' data-id='<%= el._id %>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not' %>'><%= el.todo %></span>
+                        <i class="fa fa-trash del" aria-hidden="true"></i>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    <div class="dashboardDiv2">
+        <h2><%= user.steamUserName %> has <%= left %> things left to do in <%= gameName %>.</h2>
+    </div>
+
+    <div class="dashboardDiv2">
+        <form action="/todos/createTodo/<%= user.steamID %>/<%= appID %>/<%= gameName %>" method='POST'>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <input type="submit" class="inputSubmit">
+        </form>
+    </div>
+    <div class="dashboardDiv1">
+        <h3>Achievements</h3>
+            <% if (totalAchievements) { %>
+                <ul class="todos-list">
+                    <% totalAchievements.forEach( el => { %>
+                        <li class='todoItem'>
+                            <img class="achievement-icon" src="<%= !userAchievements ? el.icongray : userAchievements.map(a => a.name).includes(el.name) ? el.icon : el.icongray %>">
+                            <div>
+                                <ul class="achievement-info">
+                                    <li class="achievement-name">
+                                        <%= el.displayName %>
+                                    </li>
+                                    <li>
+                                        <%= !el.description ? "Achievement description blank"  :  el.description %>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <h2>There are no achievements associated with this game.</h2>
+            <% } %>
+    </div>
+</main>
+<script src="/js/todos.js"></script>
