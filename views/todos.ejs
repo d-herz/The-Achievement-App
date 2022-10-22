@@ -1,6 +1,13 @@
 <main class="dashboardMain">
     <div class="dashboardDiv1">
         <h1>
+            <a href="/steam/<%= user.steamID %>" class="btn">
+                <span>Return to Dashboard</span>
+                <i class="fa-solid fa-gauge-high"></i>
+            </a>
+        </h1>
+
+        <h1>
             <a href="https://store.steampowered.com/app/<%= appID %>" target="_blank">
                 <%= gameName %>
             </a>

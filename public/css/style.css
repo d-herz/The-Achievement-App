@@ -129,8 +129,8 @@ main {
     right: 0;
 }
 .btn.logout:hover {
-    background-color: #cb5870;
-    border: 0.2rem solid #cb5870;;
+    background-color: goldenrod;;
+    border: 0.2rem solid goldenrod;;
     color: #222222;
 }
 
