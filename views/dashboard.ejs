@@ -53,10 +53,10 @@
                     </div>
                     <%=game.name%>
                     
+                    <span class="hours-played">
+                        <%= (game.playtime_forever / 60).toFixed(1) %> hours played
+                    </span>
                 </a>
-                <span class="hours-played">
-                    <%= (game.playtime_forever / 60).toFixed(1) %> hours played
-                </span>
                 <div class="steam-page-link-section">
                     <a href="https://store.steampowered.com/app/<%= game.appid %>" class="steam-page-link" target="_blank">
                         <img src="../images/steam_icon.svg" alt="Steam Page" class="steam-logo"/>
