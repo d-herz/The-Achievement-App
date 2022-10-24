@@ -349,7 +349,7 @@ nav {
     border-radius: 0.5rem;
 }
 .game-page-link:hover {
-    color: #20c9a4;
+    /* color: #20c9a4; */
     background: #141414;
     transform: translateY(-0.1rem);
 }
